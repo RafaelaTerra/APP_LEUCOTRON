@@ -35,32 +35,40 @@ export default class RestauranteApp extends Component {
                     alignItems: 'center'
                 }}>
                     <Image style={{
-                        width: 200, height: 250, marginTop: 200 , margin : 80
+                        width: 200, height: 250, marginTop: 200, margin: 80
                     }}
                         source={require('../img/rafa.png')} />
-                    <View styles={{ }}>
-                        <Collapse styles={{}}>
-                            <CollapseHeader styles={{ }}>
+                    <View>
+                        <Collapse>
+                            <CollapseHeader>
                                 <Separator bordered>
-                                    <Text style={{fontsize: 45, color: '#278FB1',  justifyContent: 'center' ,fontWeight: 'bold' }}>Cardápio</Text>
+                                    <View style={{ fontsize: 40, backgroundColor: '#EFAB1F', height: 40, width: 300, alignItems: 'center', justifyContent: 'center' }}>
+                                        <Text style={{ fontsize: 200, color: '#278FB1', justifyContent: 'center', fontWeight: 'bold' }}>Cardápio</Text>
+                                    </View>
                                 </Separator>
                             </CollapseHeader>
                             <CollapseBody>
+                                <View style={{ backgroundColor: 'white',alignItems:'center' }}>
+                                    <ListItem >
 
+                                        <Text style={{ fontsize: 35, color: '#278FB1', fontWeight: 'bold' }} onPress={() => this.props.navigation.navigate('SegundaTela')}>Salgados</Text>
+
+                                    </ListItem>
+                                </View>
+                                
+                                <View style={{ backgroundColor: 'white',alignItems:'center' }}>
                                 <ListItem >
-                                    <Text  style={{ fontsize: 35,color: '#278FB1' ,fontWeight: 'bold' }} onPress={() => this.props.navigation.navigate('SegundaTela')}>Salgados</Text>
+                                    <Text style={{ fontsize: 35, color: '#278FB1', fontWeight: 'bold' }} onPress={() => this.props.navigation.navigate('TerceiraTela')}>Sobremesas</Text>
 
                                 </ListItem>
-
+                                </View>
+                        
+                                <View style={{ backgroundColor: 'white',alignItems:'center' }}>
                                 <ListItem >
-                                    <Text style={{ fontsize: 35,color: '#278FB1' ,fontWeight: 'bold' }}  onPress={() => this.props.navigation.navigate('TerceiraTela')}>Sobremesas</Text>
+                                    <Text style={{ fontsize: 35, color: '#278FB1', fontWeight: 'bold' }} onPress={() => this.props.navigation.navigate('QuartaTela')}>Bebidas</Text>
 
                                 </ListItem>
-
-                                <ListItem >
-                                    <Text style={{ fontsize: 35,color: '#278FB1' ,fontWeight: 'bold' }} onPress={() => this.props.navigation.navigate('QuartaTela')}>Bebidas</Text>
-
-                                </ListItem>
+                                </View>
 
                             </CollapseBody>
 
@@ -68,10 +76,10 @@ export default class RestauranteApp extends Component {
                     </View>
 
                     <View style={{
-                    flex: 5, backgroundColor: 'white', justifyContent: 'center',
-                    alignItems: 'center'
-                }}>
-                 </View>
+                        flex: 5, backgroundColor: 'white', justifyContent: 'center',
+                        alignItems: 'center'
+                    }}>
+                    </View>
                 </View>
             </View>
         )
@@ -82,8 +90,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#EFAB1F',
         justifyContent: 'center',
-        alignItems:'center',
-       
+        alignItems: 'center',
+
     }
 })
 

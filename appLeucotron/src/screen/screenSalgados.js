@@ -24,7 +24,7 @@ export default class TelaSalgados extends Component {
             <View>
                 <Text  style={{color: '#278FB1'}}>{this.props.item.name}</Text>     
                 <Text  style={{color: '#278FB1'}}>{this.props.item.ingredients}</Text>
-                <Text  style={{color: '#278FB1'}}>{this.props.item.price}</Text>
+                <Text  style={{color: '#278FB1'}}>R${this.props.item.price}</Text>
                 <View style={{height: 5, backgroundColor: '#EFAB1F'}}/>
 
 
